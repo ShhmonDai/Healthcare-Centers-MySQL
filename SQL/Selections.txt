@@ -1,0 +1,38 @@
+To view all the tables in the database project:
+SELECT table_name FROM all_tables WHERE tablespace_name='PROJECT';
+
+To view prescriptions and to who they are prescribed to:
+SELECT Fname, Lname, Drug, Dosage, Refills FROM Patient P INNER JOIN Prescription R ON P.patient_ID=R.patient_ID;
+
+To view prescriptions, to whom they are prescribed and the doctor who prescribed them:
+SELECT P.Fname, P.Lname, Drug, Dosage, Refills, E.Fname AS DoctorFName, E.Lname AS DoctorLname FROM Patient P INNER JOIN Prescription R ON P.patient_ID=R.patient_ID INNER JOIN Doctor D ON R.doctor_ID=D.doctor_ID INNER JOIN employee E ON D.employee_ID=E.employee_ID ORDER BY P.Fname, P.Lname;
+
+To view what insurance patients have:
+SELECT Fname, Lname, Ins_name FROM Patient P INNER JOIN Insurance N ON P.Ins_ID=N.Ins_ID;
+
+To view what vaccines patients receives:
+SELECT Fname, Lname, Vac_name, vdate, Nurse_ID FROM Patient P INNER JOIN Vaccine V ON P.patient_ID=V.Patient_ID ORDER BY Fname, Lname;
+
+To view a all patients health histories:
+SELECT Fname, Lname, Problem_Name, Description FROM Patient P INNER JOIN Health_History H ON P.Patient_ID=H.Patient_ID;
+
+To view a specific patients health history:
+SELECT Problem_Name, Description FROM Patient P INNER JOIN Health_History H ON P.Patient_ID=H.Patient_ID WHERE P.Patient_ID=valuehere;
+
+To view all patients appointments:
+SELECT Fname, Lname, Diagnosis, Procedure, Adate, Room_Number, branch_ID FROM appointment A INNER JOIN patient P ON A.patient_ID=P.patient_ID;
+
+To view a specific patients appointments:
+SELECT Diagnosis, Procedure, Adate, Room_Number, branch_ID FROM appointment A INNER JOIN patient P ON A.patient_ID=P.patient_ID WHERE P.patient_ID=valuehere;
+
+To view health clinics and what branches they own:
+SELECT Name, Branch_ID, Phone, Address FROM Health_Clinic H INNER JOIN Branch B ON H.Clinic_ID=B.Clinic_ID ORDER BY Name;
+
+To list employees that are doctors and the branch they work at:
+SELECT Fname, Lname, Branch_ID FROM doctor D INNER JOIN employee E ON D.Employee_ID=E.Employee_ID;
+
+To list employees that are doctors and the clinic and branch address that they work at:
+SELECT Fname, Lname, Name AS Clinic, B.Address AS Location FROM doctor D INNER JOIN employee E ON D.Employee_ID=E.Employee_ID INNER JOIN Branch B ON E.Branch_ID=B.Branch_ID INNER JOIN Health_Clinic H ON B.Clinic_ID=H.Clinic_ID;
+
+
+
