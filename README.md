@@ -1,2 +1,3 @@
-# Healthcare-Centers-MySQL
-Database Design Project for a chain of healthcare clinics 
+# Database design class project for a chain of healthcare clinics
+
+The full presentation can be found at: [Presentation](../blob/master/ProjectPresentation.pdf) 
