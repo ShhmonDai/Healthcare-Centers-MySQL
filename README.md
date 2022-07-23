@@ -1,19 +1,16 @@
 <h1 align='center'> Healthcare Centers Database System <br> Design and Implementation</h1>
 
-\
-&nbsp;
-\
+
 &nbsp;
 
-## See [Presentation PDF](ProjectPresentation.pdf) for the full project presentation  
-\
+
+<h2 align='center'> See the full presentation at: 
+<a href="https://github.com/ShhmonDai/Healthcare-Centers-MySQL/blob/main/ProjectPresentation.pdf">Presentation PDF</a>
+</h2>
+
 &nbsp;
-\
-&nbsp;
 
-## Preview:
-
-
+Preview:
 ![PDF1](Readme/ProjectPresentation_Page_01.jpg "PDF 1")
 ![PDF2](Readme/ProjectPresentation_Page_02.jpg "PDF 2")
 ![PDF3](Readme/ProjectPresentation_Page_03.jpg "PDF 3")
